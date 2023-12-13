@@ -3,8 +3,8 @@ from django.core.cache import cache
 
 
 class Users(models.Model):
-    email = models.EmailField(unique=True)
     name = models.CharField(max_length=128, verbose_name='ФИО')
+    email = models.EmailField(unique=True)
     phone = models.IntegerField(unique=True, verbose_name='Телефон')
 
 
@@ -32,9 +32,9 @@ class Level(models.Model):
         ('6B', '6Б')
     ]
 
-    winter = models.CharField(max_length=2, choices=LEVEL, verbose_name='Зима')
     summer = models.CharField(max_length=2, choices=LEVEL, verbose_name='Лето')
     autumn = models.CharField(max_length=2, choices=LEVEL, verbose_name='Осень')
+    winter = models.CharField(max_length=2, choices=LEVEL, verbose_name='Зима')
     spring = models.CharField(max_length=2, choices=LEVEL, verbose_name='Весна')
 
     def str(self):
