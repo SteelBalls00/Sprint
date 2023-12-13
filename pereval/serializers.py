@@ -23,6 +23,7 @@ class LevelSerializer(serializers.ModelSerializer):
 
 
 class ImagesSerializer(serializers.ModelSerializer):
+    image = serializers.URLField()
     class Meta:
         model = Images
         fields = ['title', 'date_added', 'image']
@@ -37,4 +38,6 @@ class PerevalsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Perevals
         fields = ['beauty_title', 'title', 'other_titles', 'connect', 'add_time', 'status', 'level', 'user', 'coord', 'images']
+
+
 

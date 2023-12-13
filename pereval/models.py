@@ -1,9 +1,12 @@
 from django.db import models
 from django.core.cache import cache
+from services import get_path_upload_images
 
 
 class Users(models.Model):
-    name = models.CharField(max_length=128, verbose_name='ФИО')
+    fam = models.CharField(max_length=128, verbose_name='Фамилия')
+    name = models.CharField(max_length=128, verbose_name='Имя')
+    otc = models.CharField(max_length=128, verbose_name='Отчество')
     email = models.EmailField(unique=True)
     phone = models.IntegerField(unique=True, verbose_name='Телефон')
 
@@ -43,6 +46,7 @@ class Level(models.Model):
 
 
 
+
 class SprActivitiesTypes(models.Model):
 
     TYPE = [
@@ -59,6 +63,8 @@ class SprActivitiesTypes(models.Model):
     ]
 
     title = models.CharField(max_length=10, choices=TYPE, verbose_name='Тип похода')
+
+
 
 
 class Perevals(models.Model):
@@ -89,7 +95,7 @@ class Images(models.Model):
     pereval = models.ForeignKey(Perevals, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, verbose_name='Название изображения')
     date_added = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавления')
-    image = models.ImageField(upload_to='images', verbose_name='Изображение', blank=True, null=True)
+    image = models.ImageField(upload_to=get_path_upload_images, verbose_name='Изображение', blank=True, null=True)
 
 
 
