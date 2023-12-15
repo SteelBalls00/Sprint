@@ -1,5 +1,6 @@
 from .models import *
 from rest_framework import serializers
+from drf_writable_nested import WritableNestedModelSerializer
 
 
 class UsersSerializer(serializers.ModelSerializer):
@@ -30,7 +31,7 @@ class ImagesSerializer(serializers.ModelSerializer):
         fields = ['title', 'date_added', 'image']
 
 
-class PerevalsSerializer(serializers.ModelSerializer):
+class PerevalsSerializer(WritableNestedModelSerializer):
     add_time = serializers.DateTimeField(format='%Y-%m-%d %H:%M:%S', read_only=True)
     status = "new"
     user = UsersSerializer()
