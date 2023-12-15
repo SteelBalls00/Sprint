@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.cache import cache
-from services import get_path_upload_images
+from .services import get_path_upload_images
 
 
 class Users(models.Model):
@@ -92,17 +92,9 @@ class Perevals(models.Model):
 
 
 class Images(models.Model):
-    pereval = models.ForeignKey(Perevals, on_delete=models.CASCADE)
+    pereval = models.ForeignKey(Perevals, on_delete=models.CASCADE, related_name='images')
     title = models.CharField(max_length=200, verbose_name='Название изображения')
-    date_added = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавления')
-    image = models.ImageField(upload_to=get_path_upload_images, verbose_name='Изображение', blank=True, null=True)
+    date_added = models.DateTimeField(auto_now_add=True, blank=True, null=True, verbose_name='Дата добавления')
+    # image = models.ImageField(upload_to=get_path_upload_images, verbose_name='Изображение', blank=True, null=True)
+    image = models.ImageField(upload_to='images', verbose_name='Изображение', blank=True, null=True)
 
-
-
-class PerevalImages(models.Model):
-    pereval = models.ForeignKey(Perevals, on_delete=models.CASCADE)
-    image = models.ForeignKey(Images, on_delete=models.CASCADE)
-
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-        cache.delete(f'image-{self.pk}')

@@ -6,8 +6,7 @@ class UsersSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Users
-        fields = ['name', 'email', 'phone']
-
+        fields = ['fam', 'name', 'otc', 'email', 'phone']
 
 
 class CoordsSerializer(serializers.ModelSerializer):
@@ -24,20 +23,32 @@ class LevelSerializer(serializers.ModelSerializer):
 
 class ImagesSerializer(serializers.ModelSerializer):
     image = serializers.URLField()
+    date_added = serializers.DateTimeField(format='%Y-%m-%d %H:%M:%S', read_only=True)
+
     class Meta:
         model = Images
         fields = ['title', 'date_added', 'image']
 
 
 class PerevalsSerializer(serializers.ModelSerializer):
+    add_time = serializers.DateTimeField(format='%Y-%m-%d %H:%M:%S', read_only=True)
+    status = "new"
     user = UsersSerializer()
     coord = CoordsSerializer()
-    level = LevelSerializer(allow_null=True)
+    level = LevelSerializer()
     images = ImagesSerializer(many=True, required=False)
 
     class Meta:
         model = Perevals
-        fields = ['beauty_title', 'title', 'other_titles', 'connect', 'add_time', 'status', 'level', 'user', 'coord', 'images']
-
+        fields = ['beauty_title',
+                  'title',
+                  'other_titles',
+                  'connect',
+                  'add_time',
+                  'level',
+                  'user',
+                  'coord',
+                  'images'
+                  ]
 
 
