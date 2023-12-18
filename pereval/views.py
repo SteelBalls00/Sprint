@@ -65,6 +65,9 @@ class PerevalsViewset(viewsets.ModelViewSet):
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
     filterset_fields = ['beauty_title', 'title', 'add_time', 'user__email']
 
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
+
 
 
 

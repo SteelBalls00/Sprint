@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from pereval import views
+from pereval.views import PerevalsViewset
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 

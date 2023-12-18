@@ -7,8 +7,8 @@ class Users(models.Model):
     fam = models.CharField(max_length=128, verbose_name='Фамилия')
     name = models.CharField(max_length=128, verbose_name='Имя')
     otc = models.CharField(max_length=128, verbose_name='Отчество')
-    email = models.EmailField(unique=True)
-    phone = models.IntegerField(unique=True, verbose_name='Телефон')
+    email = models.EmailField(max_length=128)
+    phone = models.IntegerField(max_length=24, verbose_name='Телефон')
 
 
 class Coords(models.Model):
