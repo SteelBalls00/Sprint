@@ -52,4 +52,3 @@ class PerevalsSerializer(WritableNestedModelSerializer):
                   'images'
                   ]
 
-

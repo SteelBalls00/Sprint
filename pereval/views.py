@@ -14,6 +14,28 @@ class UsersViewset(viewsets.ModelViewSet):
     filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
     filterset_fields = ['fam', 'name', 'otc', 'email']
 
+
+class CoordsViewset(viewsets.ModelViewSet):
+    queryset = Coords.objects.all()
+    serializer_class = CoordsSerializer
+
+
+class LevelViewset(viewsets.ModelViewSet):
+    queryset = Level.objects.all()
+    serializer_class = LevelSerializer
+
+
+class ImagesViewset(viewsets.ModelViewSet):
+    queryset = Images.objects.all()
+    serializer_class = ImagesSerializer
+
+
+class PerevalsViewset(viewsets.ModelViewSet):
+    queryset = Perevals.objects.all()
+    serializer_class = PerevalsSerializer
+    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    filterset_fields = ['beauty_title', 'title', 'add_time', 'user__email']
+
     def create(self, request, *args, **kwargs):
         serializer = PerevalsSerializer(data=request.data)
         if serializer.is_valid():
@@ -43,31 +65,5 @@ class UsersViewset(viewsets.ModelViewSet):
                     'id': None,
                 }
             )
-
-class CoordsViewset(viewsets.ModelViewSet):
-    queryset = Coords.objects.all()
-    serializer_class = CoordsSerializer
-
-
-class LevelViewset(viewsets.ModelViewSet):
-    queryset = Level.objects.all()
-    serializer_class = LevelSerializer
-
-
-class ImagesViewset(viewsets.ModelViewSet):
-    queryset = Images.objects.all()
-    serializer_class = ImagesSerializer
-
-
-class PerevalsViewset(viewsets.ModelViewSet):
-    queryset = Perevals.objects.all()
-    serializer_class = PerevalsSerializer
-    filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
-    filterset_fields = ['beauty_title', 'title', 'add_time', 'user__email']
-
-    def get(self, request, *args, **kwargs):
-        return self.retrieve(request, *args, **kwargs)
-
-
 
 

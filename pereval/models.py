@@ -8,7 +8,7 @@ class Users(models.Model):
     name = models.CharField(max_length=128, verbose_name='Имя')
     otc = models.CharField(max_length=128, verbose_name='Отчество')
     email = models.EmailField(max_length=128)
-    phone = models.IntegerField(max_length=24, verbose_name='Телефон')
+    phone = models.IntegerField(verbose_name='Телефон')
 
 
 class Coords(models.Model):
@@ -81,7 +81,7 @@ class Perevals(models.Model):
     other_titles = models.CharField(max_length=200)
     connect = models.CharField(max_length=200)
     add_time = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавления')
-    status = models.CharField(max_length=10, choices=STATUS, default='new')
+    status = models.CharField(max_length=10, choices=STATUS, default='new', verbose_name="Статус заявки")
 
     level = models.ForeignKey(Level, on_delete=models.CASCADE)
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
