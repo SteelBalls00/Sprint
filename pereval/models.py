@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.cache import cache
 from .services import get_path_upload_images
 
 
@@ -9,6 +8,9 @@ class Users(models.Model):
     otc = models.CharField(max_length=128, verbose_name='Отчество')
     email = models.EmailField(max_length=128)
     phone = models.IntegerField(verbose_name='Телефон')
+
+    def __str__(self):
+        return f'fam: {self.fam}, name: {self.name}, otc: {self.otc}, email: {self.email}, phone: {self.phone}'
 
 
 class Coords(models.Model):
