@@ -38,6 +38,7 @@ class PerevalsSerializer(WritableNestedModelSerializer):
     coord = CoordsSerializer()
     level = LevelSerializer()
     images = ImagesSerializer(many=True, required=False)
+    status = serializers.CharField(read_only=True)
 
     class Meta:
         model = Perevals
@@ -60,6 +61,7 @@ class PerevalsUpdateSerializer(WritableNestedModelSerializer):
     coord = CoordsSerializer()
     level = LevelSerializer()
     images = ImagesSerializer(many=True, required=False)
+    status = serializers.CharField(read_only=True)
 
     def validate(self, validated_data):
         user_val_data = validated_data['user']
