@@ -12,13 +12,13 @@ router.register(r'users', views.UsersViewset)
 router.register(r'coords', views.CoordsViewset)
 router.register(r'level', views.LevelViewset)
 router.register(r'images', views.ImagesViewset)
-router.register(r'perevals', views.PerevalsViewset)
+router.register(r'submitData', views.PerevalsViewset)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('submitData/', include('rest_framework.urls', namespace='rest_framework')),
+    # path('login/', include('rest_framework.urls', namespace='rest_framework')),
     path('swagger-ui/', TemplateView.as_view(
        template_name='swagger-ui.html',
        extra_context={'schema_url':'openapi-schema'}
