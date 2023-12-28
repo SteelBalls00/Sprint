@@ -127,11 +127,17 @@
 Например:
 
 **Изменения применены**
+
 ![Изображение](https://downloader.disk.yandex.ru/preview/ec163d4788011a7687540b89338363e26272ac7ff498714e19e1141c420d3a34/658d5915/hXnybMLc1DuQ6UQXfJCdTVWpxrcJqDDJFNxdjztAP8SOlhgsHLu8FOQPCXsz_JvjXb3XzqtWPwWqptlJQBL3hA%3D%3D?uid=0&filename=Screen_2_good_upd.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
+
 **Попытка изменения данных пользователя**
+
 ![Изображение](https://downloader.disk.yandex.ru/preview/54b5d8f5e87f534a43d0f95a124225f32066918c3741865a809695ced7e9b083/658d5934/fABuc57BkqdWw1Ic8vLuKlWpxrcJqDDJFNxdjztAP8T6lznGKh6TQLZ34XFveSCBsNyWv2wZar6sNmtyJtRJYg%3D%3D?uid=0&filename=Screen_3_user_change.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
+
 **Попытка изменения со статусом, отличным от new**
+
 ![Изображение](https://downloader.disk.yandex.ru/preview/eadc42e98af3d503320ec2c05d8578aed2457b277e2f7037edc82e9437f63e51/658d595a/SPvEoDWm0KTHDmklFlXWP1WpxrcJqDDJFNxdjztAP8RtnVsAKwmILGU-m1J6jTydFaVpset4T5FSIEw9YO3NHg%3D%3D?uid=0&filename=Screen_4_not_new.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
+
 ***
 
 **Получение данных обо всех объектах, которые пользователь с почтой <email> отправил на сервер**
