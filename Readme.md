@@ -145,7 +145,9 @@
 Метод GET /submitData/?user__email=<email>
 ```
 Есть возможность фильтровать перевалы по нескольким полям, в том числе по e-mail.
+
 ![Изображение](https://downloader.disk.yandex.ru/preview/19f336a6986b18008267126652abde00e9bfb98e694e50ed8a1d8f6a001643d4/658d5973/MCmYfjfVm5eqLcopcSUqQrpwx0m54kMp3ZXvxpfi7FeO0xZx9XpG8S6lDaWhdveA3K1_drxPdYxMZxOWArW4Sg%3D%3D?uid=0&filename=Screen_6_filters.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
+
 ***
 
 Схема для [swagger](http://steelballs00.pythonanywhere.com/swagger-ui/) сгенерирована с использованием **pyyaml** и **uritemplate**.
