@@ -46,7 +46,7 @@
 ```sh
 Метод POST submitData
 ```
-![Изображение](https://www.pythonanywhere.com/user/SteelBalls00/files/home/SteelBalls00/Sprint/media/Screen_5_main.png)
+![Изображение]([https://www.pythonanywhere.com/user/SteelBalls00/files/home/SteelBalls00/Sprint/media/Screen_5_main.png](https://downloader.disk.yandex.ru/preview/493bdd6c691286b2e5a01de313cdc3378e4b239a64e5fa1a363090c80d127e41/658d5812/WntvEQQkcB8kuKGSUgiB0lWpxrcJqDDJFNxdjztAP8S4d_6IudauT3wMRoDoMklTCn6BGPw1MpNx7Rtw0pNAOA%3D%3D?uid=0&filename=Screen_5_main.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048))
 Метод submitData принимает JSON в теле запроса с информацией о перевале. Ниже находится пример такого JSON-а:
 ```python
 {
