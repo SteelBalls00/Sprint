@@ -47,6 +47,7 @@
 Метод POST submitData
 ```
 ![Изображение](https://downloader.disk.yandex.ru/preview/493bdd6c691286b2e5a01de313cdc3378e4b239a64e5fa1a363090c80d127e41/658d5812/WntvEQQkcB8kuKGSUgiB0lWpxrcJqDDJFNxdjztAP8S4d_6IudauT3wMRoDoMklTCn6BGPw1MpNx7Rtw0pNAOA%3D%3D?uid=0&filename=Screen_5_main.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
+
 Метод submitData принимает JSON в теле запроса с информацией о перевале. Ниже находится пример такого JSON-а:
 ```python
 {
@@ -94,7 +95,7 @@
  - { "status": 200, "message": null, "id": 42 }
 
 
-![Изображение](https://www.pythonanywhere.com/user/SteelBalls00/files/home/SteelBalls00/Sprint/media/Screen_1.png)
+![Изображение](https://downloader.disk.yandex.ru/preview/83cf3c3369888ae227a68f81b4ad235dbc76449bbc061c486609c2f401fe3a25/658d58e9/5YULNw7G7CegYfm0OThhxVWpxrcJqDDJFNxdjztAP8RvMmBML66anG0Gf3aP1eaz65yk_-_zKNqpdyD6EXCnsw%3D%3D?uid=0&filename=Screen_1.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
 
   После добавления в БД информации о новом перевале, со временем производится модерация нового объекта и изменяется его поле  **status**.
  
@@ -126,11 +127,11 @@
 Например:
 
 **Изменения применены**
-![Изображение](https://www.pythonanywhere.com/user/SteelBalls00/files/home/SteelBalls00/Sprint/media/Screen_2_good_upd.png)
+![Изображение](https://downloader.disk.yandex.ru/preview/ec163d4788011a7687540b89338363e26272ac7ff498714e19e1141c420d3a34/658d5915/hXnybMLc1DuQ6UQXfJCdTVWpxrcJqDDJFNxdjztAP8SOlhgsHLu8FOQPCXsz_JvjXb3XzqtWPwWqptlJQBL3hA%3D%3D?uid=0&filename=Screen_2_good_upd.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
 **Попытка изменения данных пользователя**
-![Изображение](https://www.pythonanywhere.com/user/SteelBalls00/files/home/SteelBalls00/Sprint/media/Screen_3_user_change.png)
+![Изображение](https://downloader.disk.yandex.ru/preview/54b5d8f5e87f534a43d0f95a124225f32066918c3741865a809695ced7e9b083/658d5934/fABuc57BkqdWw1Ic8vLuKlWpxrcJqDDJFNxdjztAP8T6lznGKh6TQLZ34XFveSCBsNyWv2wZar6sNmtyJtRJYg%3D%3D?uid=0&filename=Screen_3_user_change.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
 **Попытка изменения со статусом, отличным от new**
-![Изображение](https://www.pythonanywhere.com/user/SteelBalls00/files/home/SteelBalls00/Sprint/media/Screen_4_not_new.png)
+![Изображение](https://downloader.disk.yandex.ru/preview/eadc42e98af3d503320ec2c05d8578aed2457b277e2f7037edc82e9437f63e51/658d595a/SPvEoDWm0KTHDmklFlXWP1WpxrcJqDDJFNxdjztAP8RtnVsAKwmILGU-m1J6jTydFaVpset4T5FSIEw9YO3NHg%3D%3D?uid=0&filename=Screen_4_not_new.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
 ***
 
 **Получение данных обо всех объектах, которые пользователь с почтой <email> отправил на сервер**
@@ -138,7 +139,7 @@
 Метод GET /submitData/?user__email=<email>
 ```
 Есть возможность фильтровать перевалы по нескольким полям, в том числе по e-mail.
-![Изображение](https://www.pythonanywhere.com/user/SteelBalls00/files/home/SteelBalls00/Sprint/media/Screen_6_filters.png)
+![Изображение](https://downloader.disk.yandex.ru/preview/19f336a6986b18008267126652abde00e9bfb98e694e50ed8a1d8f6a001643d4/658d5973/MCmYfjfVm5eqLcopcSUqQrpwx0m54kMp3ZXvxpfi7FeO0xZx9XpG8S6lDaWhdveA3K1_drxPdYxMZxOWArW4Sg%3D%3D?uid=0&filename=Screen_6_filters.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
 ***
 
 Схема для [swagger](http://steelballs00.pythonanywhere.com/swagger-ui/) сгенерирована с использованием **pyyaml** и **uritemplate**.
